@@ -28,11 +28,11 @@ function checkAge(arr) {
     return result;
 }
 
-function newPerson(name, age, arr) {
-    let newPerson = new Person(name, age);
-    arr.push(newPerson);
-    console.log(arr);
-    return arr;
+function newPerson(num, arr1, arr2) {
+    let newPerson = new Person(getRandomName(arr2), getRandomNumber(num));
+    arr1.push(newPerson);
+    console.log(arr1);
+    return arr1;
 }
 
 function getRandomNumber(max) {
@@ -44,4 +44,4 @@ function getRandomName(arr) {
 }
 
 setInterval(checkAge, 1000, people);
-setInterval(newPerson, 2000, getRandomName(names), getRandomNumber(50), people);
+setInterval(newPerson, 2000, 50, people, names);
